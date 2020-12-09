@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0" />
+    <title>Stencil Component Starter</title>
+    <script type="module" src="/build/mycomponent.esm.js"></script>
+    <script nomodule src="/build/mycomponent.js"></script>
+    <style>
+      html {
+        --color-primary: #2196f3;
+        --color-primary-inverse: white;
+        --color-primary-highlight: orange;
+      }
+    </style>
+  </head>
+  <body>
+    <iws-stock-price stock-symbol="AAPL"></iws-stock-price>
+    <iws-stock-finder></iws-stock-finder>
+
+    <script>
+      const stockFinderEl = document.querySelector('iws-stock-finder');
+      stockFinderEl.addEventListener('ucSymbolSelected', event => {
+        console.log(event);
+      });
+    </script>
+  </body>
+</html>
