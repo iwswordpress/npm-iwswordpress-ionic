@@ -1,7 +1,7 @@
 {
   "name": "iwswordpress-ionic",
-  "version": "0.2.3",
-  "description": "IWS WP and UC",
+  "version": "0.3.0",
+  "description": "IWS WP UC CONFERNECES",
   "main": "dist/index.cjs.js",
   "module": "dist/index.js",
   "es2015": "dist/esm/index.mjs",

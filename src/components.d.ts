@@ -6,6 +6,10 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
+    interface IwsEventsFinder {
+    }
+    interface IwsEventsPlaces {
+    }
     interface IwsSpinner {
     }
     interface IwsStockFinder {
@@ -31,6 +35,18 @@ export namespace Components {
     }
 }
 declare global {
+    interface HTMLIwsEventsFinderElement extends Components.IwsEventsFinder, HTMLStencilElement {
+    }
+    var HTMLIwsEventsFinderElement: {
+        prototype: HTMLIwsEventsFinderElement;
+        new (): HTMLIwsEventsFinderElement;
+    };
+    interface HTMLIwsEventsPlacesElement extends Components.IwsEventsPlaces, HTMLStencilElement {
+    }
+    var HTMLIwsEventsPlacesElement: {
+        prototype: HTMLIwsEventsPlacesElement;
+        new (): HTMLIwsEventsPlacesElement;
+    };
     interface HTMLIwsSpinnerElement extends Components.IwsSpinner, HTMLStencilElement {
     }
     var HTMLIwsSpinnerElement: {
@@ -62,6 +78,8 @@ declare global {
         new (): HTMLMyComponentElement;
     };
     interface HTMLElementTagNameMap {
+        "iws-events-finder": HTMLIwsEventsFinderElement;
+        "iws-events-places": HTMLIwsEventsPlacesElement;
         "iws-spinner": HTMLIwsSpinnerElement;
         "iws-stock-finder": HTMLIwsStockFinderElement;
         "iws-stock-price": HTMLIwsStockPriceElement;
@@ -70,6 +88,11 @@ declare global {
     }
 }
 declare namespace LocalJSX {
+    interface IwsEventsFinder {
+        "onUcSymbolSelected"?: (event: CustomEvent<string>) => void;
+    }
+    interface IwsEventsPlaces {
+    }
     interface IwsSpinner {
     }
     interface IwsStockFinder {
@@ -96,6 +119,8 @@ declare namespace LocalJSX {
         "middleName"?: string;
     }
     interface IntrinsicElements {
+        "iws-events-finder": IwsEventsFinder;
+        "iws-events-places": IwsEventsPlaces;
         "iws-spinner": IwsSpinner;
         "iws-stock-finder": IwsStockFinder;
         "iws-stock-price": IwsStockPrice;
@@ -107,6 +132,8 @@ export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
+            "iws-events-finder": LocalJSX.IwsEventsFinder & JSXBase.HTMLAttributes<HTMLIwsEventsFinderElement>;
+            "iws-events-places": LocalJSX.IwsEventsPlaces & JSXBase.HTMLAttributes<HTMLIwsEventsPlacesElement>;
             "iws-spinner": LocalJSX.IwsSpinner & JSXBase.HTMLAttributes<HTMLIwsSpinnerElement>;
             "iws-stock-finder": LocalJSX.IwsStockFinder & JSXBase.HTMLAttributes<HTMLIwsStockFinderElement>;
             "iws-stock-price": LocalJSX.IwsStockPrice & JSXBase.HTMLAttributes<HTMLIwsStockPriceElement>;
