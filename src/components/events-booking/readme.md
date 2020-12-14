@@ -1,4 +1,4 @@
-# iws-events-finder
+# iws-events-places
 
 
 
@@ -10,13 +10,6 @@
 | Property | Attribute | Description | Type     | Default     |
 | -------- | --------- | ----------- | -------- | ----------- |
 | `config` | `config`  |             | `string` | `undefined` |
-
-
-## Events
-
-| Event                   | Description | Type                  |
-| ----------------------- | ----------- | --------------------- |
-| `iwsConferenceSelected` |             | `CustomEvent<string>` |
 
 
 ----------------------------------------------
